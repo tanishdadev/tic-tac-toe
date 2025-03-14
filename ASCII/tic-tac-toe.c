@@ -14,8 +14,10 @@ void playerMove();
 void computerMove();
 char checkWinner();
 void printWinner(char);
+void menu();
 
 int main(){
+    menu();
     char winner = ' ';
     char response = ' ';
 
@@ -163,5 +165,26 @@ void printWinner(char winner){
     }
     else{
         printf("ITS A TIE!");
+    }
+}
+void menu(){
+    char response_user = ' ';
+    printf("\n\n----------------------- WELCOME TO TIC-TAC-TOE ----------------------------------");
+    printf("\n-------------------------- Made by Tanish --------------------------------------------");
+
+    printf("\nDo you want to play the game?: (Y/N): ");
+    scanf(" %c", &response_user);
+    response_user = toupper(response_user);
+
+    if(response_user == 'Y'){
+        return;
+    }
+    else if(response_user == 'N'){
+        printf("You have exited the game!\n");
+        exit(0);
+    }
+    else{
+        printf("Invalid Input!");
+        menu();
     }
 }
