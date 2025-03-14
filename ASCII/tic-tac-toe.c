@@ -4,8 +4,8 @@
 #include <ctype.h>
 
 char board[3][3];
-const char PLAYER = 'X';
-const char COMPUTER = 'O';
+char PLAYER;
+char COMPUTER;
 
 void resetBoard();
 void printBoard();
@@ -14,10 +14,12 @@ void playerMove();
 void computerMove();
 char checkWinner();
 void printWinner(char);
+void character();
 void menu();
 
 int main(){
     menu();
+    character();
     char winner = ' ';
     char response = ' ';
 
@@ -186,5 +188,26 @@ void menu(){
     else{
         printf("Invalid Input!");
         menu();
+    }
+}
+void character(){
+    char response = ' ';
+    printf("\nWhat do you want to choose? (X/O): ");
+    scanf(" %c", &response);
+    response = toupper(response);
+
+    if(response == 'X'){
+        PLAYER = 'X';
+        COMPUTER = 'O';
+        return;
+    }
+    else if(response == 'O'){
+        PLAYER = 'O';
+        COMPUTER = 'X';
+        return;
+    }
+    else{
+        printf("Invalid option!");
+        character();
     }
 }
