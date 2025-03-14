@@ -173,7 +173,7 @@ void printWinner(char winner){
 void menu(){
     char response_user = ' ';
     printf("\n\n----------------------- WELCOME TO TIC-TAC-TOE ----------------------------------");
-    printf("\n------------------------------ Made by Tanish --------------------------------------------");
+    printf("\n---------------------------  Made by Tanish ---------------------------------------");
 
     printf("\nDo you want to play the game?: (Y/N): ");
     scanf(" %c", &response_user);
