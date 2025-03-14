@@ -51,6 +51,7 @@ int main(){
         printf("\nWould you like to play again? (Y/N): ");
         scanf(" %c", &response);
         response = toupper(response);
+        character();
     } while (response == 'Y');
 
     printf("Thanks for playing!");
@@ -172,7 +173,7 @@ void printWinner(char winner){
 void menu(){
     char response_user = ' ';
     printf("\n\n----------------------- WELCOME TO TIC-TAC-TOE ----------------------------------");
-    printf("\n-------------------------- Made by Tanish --------------------------------------------");
+    printf("\n------------------------------ Made by Tanish --------------------------------------------");
 
     printf("\nDo you want to play the game?: (Y/N): ");
     scanf(" %c", &response_user);
@@ -211,3 +212,5 @@ void character(){
         character();
     }
 }
+
+// Code completed
